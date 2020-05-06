@@ -1,6 +1,7 @@
 mydigit = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
+
 def ToTen(m, num):
     if num == '':
         TenNum = '非法'
