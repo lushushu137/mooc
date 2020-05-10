@@ -16,4 +16,5 @@ def func(mylist):
     return output
 
 
-print(func([0, 10, 100, 1000, 10000, 20000, 100000]))
+mylist = eval(input())
+print(func(mylist))
