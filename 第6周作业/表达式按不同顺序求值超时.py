@@ -22,8 +22,11 @@ def calc(a, oper, b):
         return a * b
 
 
+res = []
+
+
 def findWays(nums, ops):
-    res = []
+    global res
     if len(ops) == 1:
         res += [calc(nums[0], ops[0], nums[1])]
         # print('res:', res)
@@ -37,8 +40,9 @@ def findWays(nums, ops):
             res += findWays(newnums, newops)
     return sorted(list(set(res)))
 
+
 expr = input()
 nums = seperate(expr)[0]
 ops = seperate(expr)[1]
-
-print(findWays(nums, ops))
+finalres = ','.join([str(j) for j in findWays(nums, ops)])
+print(finalres)

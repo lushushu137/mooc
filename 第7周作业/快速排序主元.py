@@ -8,14 +8,14 @@ def func(mylist):
 
         while flag1 and leftmark < i:
             # print('leftmark and i:', leftmark, i)
-            if mylist[leftmark] <= mylist[i]:
+            if mylist[leftmark] < mylist[i]:
                 leftmark += 1
             else:
                 flag1 = False
         # print('flag1:', flag1)
         while flag2 and rightmark > i:
             # print('rightmark and i:', rightmark, i)
-            if mylist[rightmark] >= mylist[i]:
+            if mylist[rightmark] > mylist[i]:
                 rightmark -= 1
             else:
                 flag2 = False
@@ -31,5 +31,6 @@ def output(answerlist):
 
 
 heylist = input()
-ohlist = heylist.split()
+ohlist = [int(i) for i in heylist.split()]
+# print(ohlist)
 print(output(func(ohlist)))
